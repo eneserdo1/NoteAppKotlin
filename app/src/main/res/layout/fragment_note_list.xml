@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightGrey"
+    tools:context=".view.NoteListFragment">
+    <LinearLayout
+        android:id="@+id/searcLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="20dp"
+        android:weightSum="1"
+        android:orientation="vertical">
+        <SearchView
+            android:id="@+id/noteList_searchview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.93"
+            android:paddingStart="5dp"
+            android:background="@drawable/searchview_background"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.07"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal">
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/color1"
+                android:layout_weight="0.2"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/color2"
+                android:layout_weight="0.2"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/color3"
+                android:layout_weight="0.2"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/color4"
+                android:layout_weight="0.2"/>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/color5"
+                android:layout_weight="0.2"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/note_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/searcLayout"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/notelist_floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="30dp"
+        android:background="@color/yellow"
+        android:clickable="true"
+        android:src="@drawable/ic_baseline_add_24"
+        />
+
+
+</RelativeLayout>
